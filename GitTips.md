@@ -2,6 +2,19 @@
 
 # <a name="GitTips" >**GitTips**</a>
 
+​	
+
+~~~c
+git init
+git add 
+git commit
+git remote add origin http://name:password@gitee.com/zhaochengjie/gitname.git
+~~~
+
+
+
+
+
 ## <a name="git gc" >**git gc**</a>
 
 - ~~~c 
