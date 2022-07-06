@@ -6,8 +6,8 @@
 
 - [简介](#简介)
 - [GitTips](#GitTips)
-  - [(git gc)](#(git gc))
-  - [gitpush](#gitpush)
+  - [git gc](#git_gc)
+  - [git push](#git_push)
 
 # <a name="GitTips" >**GitTips**</a>
 
@@ -24,7 +24,7 @@ git remote add origin http://name:password@gitee.com/zhaochengjie/gitname.git
 
 
 
-## <a name="git gc" >**git gc**</a>
+## <a name="git gc" >**git_gc**</a>
 
 - ~~~c 
   git gc --prune=now 
