@@ -6,7 +6,7 @@
 
 - [简介](#简介)
 - [GitTips](#GitTips)
-  - [git gc](#git gc)
+  - [(git gc)](#(git gc))
   - [gitpush](#gitpush)
 
 # <a name="GitTips" >**GitTips**</a>
