@@ -1,5 +1,14 @@
 [TOC](文章目录)
 
+<a name="Menutop" >顶部</a>
+
+# [目录](#目录)
+
+- [简介](#简介)
+- [GitTips](#GitTips)
+  - [git gc](#git gc)
+  - [git push](#git push)
+
 # <a name="GitTips" >**GitTips**</a>
 
 ​	
