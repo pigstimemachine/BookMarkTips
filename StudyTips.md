@@ -14,6 +14,7 @@
   - [移动光标](#移动光标)
   - [进入和退出](#进入和退出)
   - [删除](#删除)
+  - [撤销](#撤销)
 
 # <a name="GitTips" >**GitTips**</a>
 
@@ -54,14 +55,6 @@ git remote add origin http://name:password@gitee.com/zhaochengjie/gitname.git
 # <a name="LinuxTips" >**LinuxTips**</a>
 
 ​	
-
-~~~c
-
-~~~
-
-
-
-
 
 ## <a name="udhcpc" >**udhcpc**</a>
 
@@ -106,3 +99,11 @@ udhcpc就是终端设备作为DHCP客户端
 ## <a name="删除" >**删除**</a>
 
 - 输入dd删除该行。
+- 输入ndd删除n行，n代表删除以下多少行。
+
+
+
+## <a name="撤销" >**撤销**</a>
+
+- 输入u撤销最后一次执行的命令。
+- 输入Ctrl+R可以重做被撤销的命令。
