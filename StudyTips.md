@@ -9,12 +9,18 @@
   - [git gc](#git_gc)
   - [git push](#git_push)
 - [LinuxTips](#LinuxTips)
+- [ShellTips](#ShellTips)
   - [udhcpc](#udhcpc)
 - [VimTips](#VimTips)
   - [移动光标](#移动光标)
   - [进入和退出](#进入和退出)
   - [删除](#删除)
   - [撤销](#撤销)
+  - [定位](#定位)
+  - [外部命令](#外部命令)
+- [ElectronicsTips](#ElectronicsTips)
+  - [晶振](#晶振)
+
 
 # <a name="GitTips" >**GitTips**</a>
 
@@ -54,6 +60,10 @@ git remote add origin http://name:password@gitee.com/zhaochengjie/gitname.git
 
 # <a name="LinuxTips" >**LinuxTips**</a>
 
+
+
+# <a name="ShellTips" >**ShellTips**</a>
+
 ​	
 
 ## <a name="udhcpc" >**udhcpc**</a>
@@ -70,7 +80,13 @@ udhcpc就是终端设备作为DHCP客户端
 
 
 
+## <a name="dir" >**dir**</a>
 
+- ls(list)：会显示不同类型的文件的颜色
+
+  dir(directory)：不显示不同文件类型的文件颜色，所有文件都是一种颜色
+
+  但两种指令的作用都是显示当前目录下的文件
 
 # <a name="VimTips" >**VimTips**</a>
 
@@ -107,3 +123,27 @@ udhcpc就是终端设备作为DHCP客户端
 
 - 输入u撤销最后一次执行的命令。
 - 输入Ctrl+R可以重做被撤销的命令。
+
+## <a name="定位" >**定位**</a>
+
+- 输入大写 G 可以使得当前光标直接跳转到文件最后一行。
+-  输入 gg 可以使得当前光标直接跳转到文件第一行。
+
+- 在正常模式下输入 / 字符。您此时会注意到该字符和光标都会出现在屏幕底 部，这跟 : 命令是一样的。接着输入 errroor <回车>。那个errroor就是您要查找的字符串。要查找同上一次的字符串，只需要按 n 键。要向相反方向查找同上一次的字 符串，请输入大写 N 即可。如果您想逆向查找字符串，请使用 ? 代替 / 进行。
+
+## <a name="外部命令" >**外部命令**</a>
+
+- 输入 :! 然后紧接着输入一个外部命令可以执行该外部命令按下我们所熟悉的 : 命令使光标移动到屏幕底部。这样您就可以输入一行命令了。接着输入感叹号 ! 这个字符，这样就允许您执行外部的 shell 命令了。我们以 ls 命令为例。输入 !ls <回车> 。该命令就会列举出您当前目录的 内容，就如同您在命令行提示符下输入 ls 命令的结果一样。如果 !ls 没起 作用，您可以试试 :!dir 看看。
+
+
+
+# <a name="ElectronicsTips" >**ElectronicsTips**</a>
+
+
+
+## <a name="晶振" >**晶振**</a>
+
+
+
+- 电子线路中的晶体振荡器也分为无源晶振和有源晶振两种类型。无源晶振与有源晶振的英文名称不同，无源晶振为crystal（晶体），而有源晶振则叫做oscillator（振荡器）。无源晶振是有2个引脚的无极性元件，需要借助于时钟电路才能产生振荡信号，自身无法振荡起来，所以“无源晶振”这个说法并不准确；有源晶振有4只引脚，是一个完整的振荡器，其中除了石英晶体外，还有晶体管和阻容元件，因此体积较大。
+- 
