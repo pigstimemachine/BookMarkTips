@@ -2,6 +2,8 @@
 
 <a name="Menutop" >顶部</a>
 
+- 做技术的，永远不要和客户硬刚。
+
 # [目录](#目录)
 
 - [简介](#简介)
@@ -14,6 +16,14 @@
 
 - [ShellTips](#ShellTips)
   - [udhcpc](#udhcpc)
+  - [history](#history)
+  - [alias](#alias)
+  - [通配符](#通配符)
+  - [type](#type)
+  - [read](#read)
+  - [declare/typeset](#declare/typeset)
+  - [ulimit](#ulimit)
+  - [dd](#dd)
 - [VimTips](#VimTips)
   - [编辑](#编辑)
   - [移动光标](#移动光标)
@@ -52,6 +62,7 @@ git remote add origin http://name:password@gitee.com/zhaochengjie/gitname.git
 
 - ~~~c 
   git gc --prune=now 
+  ~~~
 
 ​				解决本地缓存过大的问题，清理本地缓存
 
@@ -92,7 +103,33 @@ git remote add origin http://name:password@gitee.com/zhaochengjie/gitname.git
 
 # <a name="ShellTips" >**ShellTips**</a>
 
-​	
+-  指令太长的话 可以使用 “\【Enter】”来进行下一行输出
+- “\”表示仅跳脱紧接着的下一个字符，中间不能包含空格
+
+- # ##
+
+  
+
+  - echo ${path#/*:}   一个#代表删除掉最短的一个“/\*:” ,
+
+  - ~~~SHELL
+    echo ${path#/*:}
+    /usr/kerberos/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:
+    /root/bin     
+    ~~~
+
+  - 
+
+  - echo ${path##/\*:}  两个 ## 表示删除掉最长的那个数据
+
+  - ~~~shell
+    echo ${path##/*:}
+    /root/bin
+    ~~~
+
+  - 
+
+
 
 ## <a name="udhcpc" >**udhcpc**</a>
 
@@ -123,7 +160,94 @@ udhcpc就是终端设备作为DHCP客户端
 - 单个yes输出y
 - yes + 字符串。 连续输出字符串。
 
+## <a name="history" >**history**</a>
+
+- 查看使用过的shell指令 甚至曾经在指令列输入过的密码也会保存下来
+
+
+
+## <a name="alias" >**alias**</a>
+
+- alias ll='ls -al' 别名设置，将‘ls -al’用“ll”来替换，减少复杂输入。
+
+
+
+## <a name="通配符" >**通配符**</a>
+
+- “*”：星号，替代零个，一个或者多个字符
+- “？”：问号，替代一个字符
+
+
+
+## <a name="type" >**type**</a>
+
+- 透过type 这个指令我们可以知道每个指令是否为bash 的内建指令
+- type [-tpa]  name  
+- 与which指令有一定的相似之处
+
+## <a name="read " >**read **</a>
+
+- read \-p "Please keyin your name: " \-t 30 named    提示使用者30s内输入自己的大名，将该输入字符串作为名为named的变量内容
+- echo $named 则可以显示输入的内容
+
+
+
+## <a name="declare/typeset" >**declare/typeset**</a>
+
+
+
+- declare [-aixr] variable 
+- -a:将variable的变量定义为数组（array）类型
+- -i：将variable的变量定义为证书数字（integer）类型
+- -x：用法与export一样，就是将后面的variable变成环境变量
+- -r：将变量设定为readonly类型，该变量不可被更改内容，也不能unset
+
+
+
+- 例子：
+
+- ~~~ sh
+   sum=100+300+500 
+   echo $sum
+   100+300+500
+  ~~~
+
+- ~~~shell
+  declare -i sum=100+300+500 
+   echo $sum
+   450
+  ~~~
+
+- bash 对于变量有几个基本的定义：
+
+  - 变量类型默认为字符串，若不指定变量类型，则1+2为一个字符串而不是计算式
+  - bash 环境中的数值运算，预设最多仅能达到整数形态，所以1/3=0
+
+
+
+## <a name="ulimit" >**ulimit**</a>
+
+
+
+- ulimit [-SHacdfltu] [配额]
+- ulimit -a   列出当前身份的所有限制资料数值
+- ulimit -f 10240  限制用户仅能建立10MBytes以下的容量的档案
+
+
+
+## <a name="dd" >**dd**</a>
+
+
+
+- dd if=/dev/zero of=file count=10 bs=1024 
+  - 例如/dev/zero文件代表一个永远输出 0的设备文件，使用它作输入可以得到全为空的文件。因此可用来创建新文件和以覆盖的方式清除旧文件。下面使用dd命令将从zero设备中创建一个10K大小（bs决定每次读写1024字节，count定义读写次数为10次），
+    但内容全为0的文件。
+
+
+
 # <a name="VimTips" >**VimTips**</a>
+
+
 
 
 
